@@ -1,6 +1,6 @@
 //підключаємо модулі для роботи з фс
 const fs = require('fs');
-// const path = require('path');
+const path = require('path');
 
 // перевіряємо наявність теки
 function f01(){
@@ -13,3 +13,14 @@ function f01(){
     }
 }
 f01();
+// перевірка існування файлу
+function f02(){
+    const pathToFile = './test/info.dat';
+    if(fs.existsSync(pathToFile)){
+        console.log('yes')
+    }
+    else {
+        console.log('no');
+    }
+}
+f02();
