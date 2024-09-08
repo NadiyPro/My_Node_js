@@ -24,3 +24,35 @@ function f02(){
     }
 }
 f02();
+// розрахунок розміру файла
+function f03(){
+    const pathToFile = './test/info.dat';
+    const fileInfo = fs.statSync(pathToFile);
+    console.log(fileInfo)
+}
+f03();
+// Ім'я та розширення файлу
+function f04(){
+    const pathToFile = './test/info.dat';
+    console.log(path.basename(pathToFile));
+    console.log(path.dirname(pathToFile));
+    console.log(path.extname(pathToFile));
+    console.log(path.parse(pathToFile));
+}
+f04();
+// отримуємо файли та папки вкладені в одну директорію
+function f05(){
+    const pathToDir = './test';
+    const allFiles = fs.readdirSync(pathToDir);
+    console.log(allFiles)
+}
+f05();
+function f050(){
+    const pathToDir = '.';
+    const allFiles = fs.readdirSync(pathToDir);
+    console.log(allFiles)
+    let out = '';
+    allFiles.forEach(item => out += item +'\n');
+    console.log(out);
+}
+f050();
