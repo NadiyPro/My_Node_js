@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // перевіряємо наявність теки
 function f01(){
-    const pathToDir = './test1';
+    const pathToDir = './test';
     if(fs.existsSync(pathToDir)){
         console.log('yes')
     }
