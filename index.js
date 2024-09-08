@@ -56,3 +56,6 @@ function f050(){
     console.log(out);
 }
 f050();
+// отримати абсолютний шлях
+const directoryPath = path.join(__dirname,'test');
+console.log(directoryPath);
